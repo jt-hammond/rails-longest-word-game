@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>******** Welcome to the longest word-game!********</h1>
+  <h2>Here is your grid:</h2>
+  <h2><%= @grid.join(" ") %></h2>
+  <h1>*****************************************************</h1>
+
+  <h2>What's your best shot?</h2>
+  <%@start_time = Time.now%>
+  <form action="/score" method="get">
+    <input type="text" name="response">
+    <%= hidden_field_tag "grid", @grid %>
+    <%= hidden_field_tag "time", @start_time %>
+    <input type="submit">
+  </form>
+</div>
+

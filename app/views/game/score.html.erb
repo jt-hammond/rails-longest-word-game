@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>******** Now your result ********</h1>
+  <table>
+    <tr>
+      <td><h2>Your word: <%=@attempt%></h2></td>
+    </tr>
+    <tr>
+      <td><h2>RESULTS</h2></td>
+      <td><h2>GAMES</h2></td>
+    </tr>
+    <tr>
+      <td><h3>Time Taken to answer: <%=@results[:time]%></h3></td>
+      <td><h3>Average Time: <%=@results[:avg_time]%></h3></td>
+    </tr>
+    <tr>
+      <td><h3>Your score: <%=@results[:score]%></h3></td>
+      <td><h3>Average Score: <%=@results[:avg_score]%></h3></td>
+    </tr>
+    <tr>
+      <td><h3>Message: <%=@results[:message]%></h3></td>
+      <td><h3>Total Games: <%=@results[:games]%></h3></td>
+    </tr>
+  </table>
+
+  <h1>*****************************************************</h1>
+
+  <h3><%= link_to "Another try?", game_path %></h3>
+</div>
